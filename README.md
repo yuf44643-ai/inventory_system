@@ -47,5 +47,43 @@ inventory_system/
 This project is for learing and educational use only.
 
 
+# Binary Tree & Shell Sort
+## Binary Features
+- Binary tree node class definition
+- Build a binary tree from level-order input list
+- Pre-order traversal
+- In-order traversal
+## Usage Example
+```python
+from binary_tree import BinaryTree
+
+tree = BinaryTree()
+tree.create_tree([1, 2, 3, 4, 5, None, 6])
+
+print("Pre-order Traversal:", tree.pre_order(tree.root))
+print("In-order Traversal:", tree.in_order(tree.root))
+```
+## Complexity Analysis
+- Tree traversal: O(n)
+- Binary Search Tree search/insert: Average O(log n), WorstO(n)
+## Shell Sort principle
+- An advanced optimization of basic insertion sort
+- Divide the array into groups by a gap value and sort each group
+- Gradually reduce the gap until gap = 1
+- Final full insertion sort ensure the whole array is fully sorted
+## Usage Example
+```python
+from shell_sort import shell_sort
+
+arr = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+print(shell_sort(arr))  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+## Complexity Analysis
+- Time Complexity: Average O(n log n), Worst O(n²)
+- Space Complexity: O(1) (in-place sorting)
+- Stability: Unstable sorting algorithm
+
+
+
 
 
