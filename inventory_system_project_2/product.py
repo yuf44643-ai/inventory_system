@@ -39,6 +39,11 @@ class Product:
     #Total value of goods (price * quantity)
     def calculate_value(self) -> float:
         return self._price * self._quantity
+    
+    #helper print the method of product
+    @staticmethod
+    def printAllMethod():
+        print("calculate_value, get_product_id, get_name, get_price, set_price, set_quantity")
 
     # print product information
     def __str__(self):
