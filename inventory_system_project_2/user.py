@@ -1,5 +1,6 @@
 from enum import Enum
 from typing import List
+from abc import ABC, abstractmethod
 
 # Define user roles
 class UserRole(Enum):
@@ -7,8 +8,9 @@ class UserRole(Enum):
     MANAGER = "Manager"
     STAFF = "Staff"
 
+
 # Username, Role, Permission
-class User:
+class User(ABC):
     def __init__(self, username: str, role: UserRole):
         self._username = username
         self._role = role
@@ -29,7 +31,12 @@ class User:
             UserRole.STAFF: ["view"]
         }
         return action in permissions.get(self._role, [])
-
+    
+    # Abstract method: any subclass must implement its own report generation
+    @abstractmethod
+    def generate_full_report(self, inventory) -> str:
+        pass
+    
     def __str__(self):
         return f"User: {self._username}, Role: {self._role.value}"
 
