@@ -20,7 +20,15 @@ firstNode.right = thirdNode
 secondNode.left = fourthNode
 secondNode.right = fifthNode
 
-#common Traversals method read all data under and include the node
+#simple binary tree created
+#        1
+#       / \
+#      2   3
+#     / \
+#    4   5
+
+#common Traversal methods
+#Depth-First Traversal
 #root -> left -> right
 def preOrderTraversal(node):
     if node is None:
@@ -39,6 +47,22 @@ def postOrderTraversal(node):
         return []
     return postOrderTraversal(node.left) + postOrderTraversal(node.right) + [node.data]
 
+#Breadth-First Traversal
+def levelOrderTraversal(node):
+    if node is None:
+        return []
+    #using queue (first in first out)
+    result = []
+    queue = [node]
+    while len(queue) > 0:
+        current_node = queue.pop(0)
+        result.append(current_node.data)
+        if current_node.left:
+            queue.append(current_node.left)
+        if current_node.right:
+            queue.append(current_node.right)
+    return result
+
 #Prints the elements of the traversal list separated by " > "
 def printorder(Traversal):
     print(" > ".join(map(str, Traversal)))
@@ -46,3 +70,4 @@ def printorder(Traversal):
 printorder(preOrderTraversal(firstNode))
 printorder(inOrderTraversal(firstNode))
 printorder(postOrderTraversal(firstNode))
+printorder(levelOrderTraversal(firstNode))
