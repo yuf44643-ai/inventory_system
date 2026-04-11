@@ -41,7 +41,7 @@ inventory_system/
    -  View total value (The total inventory value is shown at the bottom of the window)
 4. Permission:
    - Administrator: All enabled
-   - Manager: Update & View enabled
+   - Manager: add & remove enabled
    - visitor: View only
 ## 📃License
 This project is for learing and educational use only.
