@@ -52,8 +52,7 @@ This project is for learing and educational use only.
 
 # Binary Tree & Shell Sort
 
-## video link
-https://youtu.be/FXCunv-_brU
+## video link:https://youtu.be/FXCunv-_brU
 
 ## Binary Features
 - Binary tree node class definition
