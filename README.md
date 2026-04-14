@@ -28,6 +28,7 @@ inventory_system/
 ---user.py
 ---gui.py
 ---main.py
+---login.py
 ## Preparatory work
 - Python 3.6 or higher installed
 - Tkinter
