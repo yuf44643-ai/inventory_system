@@ -1,6 +1,8 @@
 # inventory_system
 A GUI-based inventory management system developed with Python and Tkinter, adopting OOP and modular design, with user permission control and complete product inventory operations.
 
+## video link:https://youtu.be/CZ5dIygkbJk
+
 📖**Table of Contents**
 1. Project Overview
 2. Core Features
